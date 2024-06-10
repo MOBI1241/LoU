@@ -15,11 +15,11 @@ from Youtube.forcesub import handle_force_subscribe
 # Calculate current time greeting
 currentTime = datetime.datetime.now()
 if currentTime.hour < 12:
-    wish = "Good morning 🌞"
+    wish = "בוקר טוב 🌞"
 elif 12 <= currentTime.hour < 18:
-    wish = "Good afternoon 🌤️"
+    wish = "צהוריים טובים 🌤️"
 else:
-    wish = "Good evening 🌝"
+    wish = "ערב טוב 🌝"
 
 
 
@@ -41,7 +41,7 @@ async def about(client, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton('⛔️ Close', callback_data='cancel')]
+            [InlineKeyboardButton('⛔️ לסגור', callback_data='cancel')]
         ]
     ))
 
@@ -59,14 +59,14 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('📍 Update Channel', url='https://t.me/NT_BOT_CHANNEL'),
+                InlineKeyboardButton('📍 ערוץ עדכונים', url='https://t.me/Movietext83'),
             ],
             [
-                InlineKeyboardButton('👩‍💻 Developer', url='https://t.me/LISA_FAN_LK'),
-                InlineKeyboardButton('👥 Support Group', url='https://t.me/NT_BOTS_SUPPORT'),
+                InlineKeyboardButton('👩‍💻 מתכנת', url='https://t.me/Mods1234'),
+                InlineKeyboardButton('👥קבוצת תמיכה', url='https://t.me/Movietext83'),
             ],
             [
-                InlineKeyboardButton('⛔️ Close', callback_data='cancel')
+                InlineKeyboardButton('⛔️ לסגור', callback_data='cancel')
             ]
         ]
     ))
@@ -75,13 +75,13 @@ async def start(client, message):
 @Client.on_message(filters.command("help"))
 def help(client, message):
     help_text = """
-    Welcome to the YouTube Video Uploader Bot!
+    ברוכים הבאים לבוט מוריד יוטיוב!
 
-To upload a YouTube video, simply send me the YouTube link.
+שלחו קישור לסרטון שאתם רוצים להוריד ואני יספק אותו.
     
-Enjoy using the bot!
+תהנו משימוש הבוט!
 
-   ©️ Channel : @NT_BOT_CHANNEL
+   ©️ ערוץ : @isMlvie_bot
     """
     message.reply_text(help_text)
 
